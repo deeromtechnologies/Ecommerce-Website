@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang "en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title></title>
+	<style>
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans",sans-serif;
+}
+
+body
+{
+	background-color: #444;
+	background-image: url('static/wall11.jpg');
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.blog-posts
+{
+	width: min(1200px,100%);
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+
+.post
+{
+	width: calc(33% -10px);
+	overflow: hidden;
+}
+
+.post-img
+{
+	width: 100%;
+	border-radius: 6px;
+	transition: .3s linear;
+}
+
+.post-content
+{
+	background-color: #ffffffdd;
+	margin:0 20px;
+	padding: 30px;
+	border-radius: 6px;
+	transform:translateY(-60px);
+	transition: .3s linear;
+}
+
+.post-content h3
+{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.date
+{
+	font-size: 15px;
+	font-style: italic;
+	color: #e77f67;
+}
+
+.post:hover .post-img
+{
+	transform: translateY(20px);
+}
+
+.post:hover .post-content
+{
+	transform: translateY(-80px);
+}
+	</style>
+</head>
+<body style="background-image: url({{ url_for('static', filename='wall11.jpg') }})">
+	
+	<form class="blog-posts" method="GET">
+		<div class="post">
+			
+			<img src="blog1.png" alt=" " class="post-img">
+			<div class="post-content">
+			<h3>Bloggers are writers. They write text in the form of posts. Blogging is a written, 
+			</h3>
+			<span class="date">July 13,2020</span>
+		</div>
+	</div>
+
+
+		<div class="post">
+			<div class="card">
+			<img src="blog2.png" alt=" " class="post-img">
+			<div class="post-content">
+			<h3> Blogging is a written, text-based medium, right?Not really.Yes, it’s a visual medium,  
+			</h3>
+			<span class="date">May 19,2120</span>
+		</div>
+	</div>
+
+
+
+		<div class="post">
+			<div class="card">
+			<img src="blog3.png" alt=" " class="post-img">
+			<div class="post-content">
+			<h3>Blogging is a written, text-based medium, right?Not really.Yes, it’s a visual medium, 
+			</h3>
+			<span class="date">Dec 1,2021</span>
+		</div>
+	</div>
+
+
+
+
+		<div class="post">
+			<div class="card">
+			<img src="blog4.png" alt=" " class="post-img">
+			<div class="post-content">
+			<h3>Blogging is a written, text-based medium, right?Not really.Yes, it’s a visual medium, that’s true, but .
+			</h3>
+			<span class="date">Feb 13,2020</span>
+		</div>
+	</div>
+
+</form>
+</body>
+</html>

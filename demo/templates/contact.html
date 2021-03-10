@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/contact.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght:@200;300;400;500;600;700;800;900&display=swap')
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+
+}
+
+.contact
+{
+	position: relative;
+	min-height: 100vh;
+	padding:50px 100px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(static/wall1.jpg);
+	color: #fff;
+}
+.contact h1
+{
+	color:#fff;
+}
+	</style>
+</head>
+<body style="background-image: url({{ url_for('static', filename='wall1.jpg') }})">
+	<section class="contact">
+		<div class="content">
+			<h1>Contact Us</h1>
+			<h3>STEP SHOES</h3>
+			<p>Wherever you go I am there !!</p>
+		</div>
+		<div class="container">
+			<div class="contactInfo">
+				<div class="box">
+					<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+						<div class="text">
+							<h3>Address</h3>
+							<p>496B Lake Side,<br>The Getty Center, <br>LA</p>
+						</div>
+					</div>
+				
+
+				<div class="box">
+					<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+
+						<div class="text">
+							<h3>Phone</h3>
+							<p>507-469-23445</p>
+						</div>
+					</div>
+				
+				<div class="box">
+					<div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+						<div class="text">
+							<h3>Email</h3>
+							<p>www.stepshoes.inc</p>
+						</div>
+					</div>
+				</div>
+			<div class="contactForm">
+				<form>
+					<h2>Send Message</h2>
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<span>Full Name</span>
+					</div>
+
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<span>Email</span>
+					</div>
+
+					<div class="inputBox">
+						<textarea required="required"></textarea>
+						<span>Type Your Message......</span>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

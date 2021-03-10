@@ -1,0 +1,14 @@
+body
+{
+  height: 100%;
+  margin: 0;
+}
+
+.profile {
+ 
+  background-image: url("static/girl.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
