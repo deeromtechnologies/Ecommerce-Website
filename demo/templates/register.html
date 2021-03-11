@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="POST" action="#">
+	{{ form.csrf_token }}
+    {{ form.uid.label }} {{ form.uid(size=20) }}
+    {{ form.username.label }} {{ form.username(size=20) }}
+	{{ form.email.label }} {{ form.email(size=20) }}
+	{{ form.dob.label }} {{ form.dob(size=20) }}
+	{{ form.password.label }} {{ form.password(size=20) }}
+	<input type="submit">
+	</form>
+</body>
+</html>

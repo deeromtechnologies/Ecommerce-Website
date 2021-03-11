@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Sign Up</title>
-  <link rel="stylesheet"  type="text" href="static/signup.css">
-  <style type="text/css">
+	<title>Update</title>
+	<style type="text/css">
     body
 {
   background: url(static/wall11.jpg);
@@ -56,24 +56,19 @@ input[type=submit]
   color: #fff;
 
 }
-
-  
-  </style>
+</style>
 </head>
 <body style="background-image: url({{ url_for('static', filename='wall11.jpg') }})">
-  <div class="signup">
-    <h1>Signup Now</h1>
-    <form action="#" method="POST">
-      {{ form.csrf_token }}
-    
-     <br>{{form.uid.label}}{{ form.uid() }}</br>
-     <br>{{form.username.label}} {{ form.username() }}</br>
-     <br>{{form.email_id.label}} {{ form.email_id() }}</br>
-     <br>{{form.dob.label}}  {{ form.dob() }}</br>
-     <br>{{form.password.label}} {{ form.password() }}</br>
-    
-      <input  type="submit" value="Submit">
-    </form>
-  </div>
+	 <div class="signup">
+	 	 <h1>Update Now</h1>
+	 	 <form action='#' method = "POST">
+
+	 	 	
+	 	 	<p>username <input type = "text" name = "username" value="{{user.username}}"/></p>
+	 	 	<p>email_id <input type = "text" name = "email_id"  value="{{user.email_id}}"/></p>
+	 	 	<p>dob <input type = "date" name = "dob" value="{{user.dob}}"/></p>
+	 	 	<p>password <input type = "password" name = "password" value="{{user.password}}"/></p>
+	 	 	<p><input type = "submit" value = "Submit" /></p>
+</form>
 </body>
 </html>
