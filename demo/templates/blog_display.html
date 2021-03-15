@@ -1,35 +1,51 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Blog Display</title>
-<style> 
-textarea {
-  width: 100%;
-  height: 100px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
+<html lang = "en">
+   <head></head>
+   <style type="text/css">
+ body
+{
+  background: url(static/wall11.jpg);
+  background-size: cover; 
+  font-family: Arial;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 25px
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+  
 </style>
-</head>
-<body>
-	<form>
-		<input type="image" img src="https://c0.wallpaperflare.com/preview/920/519/697/abstract-php-c-analytics.jpg" name="image"><br>
-  		<label>User_id:</label><br>
-  		<input type="text"  name="uid" ><br>
-  		<label>Username:</label><br>
-  		<input type="text"  name="username" ><br>
-  		<label>Title:</label><br>
-  		<input type="text" name="title"><br>
-  		<label>Date:</label><br>
-  		<input type="date" name="bday"><br>
-  		<label for="text">Content:</label><br>
-		<textarea>My blog..</textarea>
-</form>
-</body>
+<body style="background-image: url({{ url_for('static', filename='wall11.jpg') }})">
+  <h3><a href = "{{ url_for('add_blog') }}">Add User</a></h3>
+  <table class="center" border='3'>
+         <thead>
+          <tr>
+            
+            <th>Username</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Image</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in result %}
+          <tr>
+           
+            <td>{{ user.username}}</td>
+            <td>{{ user.title }}</td>
+            <td>{{ user.content }}</td>
+            <td>{{ user.image }}</td>
+            <td>{{ user.date}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+   </body>
 </html>

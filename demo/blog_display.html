@@ -1,14 +1,12 @@
 <html lang=en>
 <head></head>
 <body>
-	{%- for message in get_flashed_messages() %}
-	{{ message }}
-	{%- endfor %}
+	
 	<h3><a href="#">Add user</a></h3>
 	<table border="3">
 		<thead>
 			<tr>
-				<th>User_id:</th>
+				<th>Blog_id</th>
 				<th>Username</th>
 				<th>Title</th>
 				<th>Date</th>
@@ -18,17 +16,17 @@
 		</thead>
 
 		<tbody>
-			{% for user in result%}
+			
 			<tr>
-				<td>{{user.uid}}</td>
-				<td>{{user.username}}</td>
-				<td>{{user.title}}</td>
-				<td>{{user.date}}</td>
-				<td>{{user.content}}</td>
-				<td>{{user.image}}</td>
+				<td>{{blog_id.blog_id}}</td>
+				<td>{{blog_id.username}}</td>
+				<td>{{blog_id.title}}</td>
+				<td>{{blog_id.date}}</td>
+				<td>{{blog_id.content}}</td>
+				<td>{{blog_id.image}}</td>
 
 			</tr>
-			{% endfor%}
+			
 		</tbody>
 	</table>
 </body>

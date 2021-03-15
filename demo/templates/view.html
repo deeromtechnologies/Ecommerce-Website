@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang=en>
 <head></head>
-<body>
+<style type="text/css">
+ body
+{
+  background: url(static/wall11.jpg);
+  background-size: cover; 
+  font-family: Arial;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 25px
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+	
+</style>
+<body style="background-image: url({{ url_for('static', filename='wall11.jpg') }})">
+
 	{%- for message in get_flashed_messages() %}
 	{{ message }}
 	{%- endfor %}
 	<h3><a href="{{url_for('signup')}}">Add user</a></h3>
-	<table border="3">
+	<table class="center" border="3">
 		<thead>
 			<tr>
 				

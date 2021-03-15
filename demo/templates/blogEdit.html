@@ -1,0 +1,25 @@
+<html>
+<body>
+<form action="#" method="POST">
+<table border="3" style="width: 200px;height:200px;margin-top:100px;margin-left: 400px">
+
+
+
+<tr> <th>Blog id</th><td>{{result.blog_id}}</td></tr>
+<tr> <th>Username</th><td>{{result.username}}</td></tr>
+<tr> <th>Image</th><td>{{result.image}}</td></tr>
+<tr> <th>Title</th> <td>{{result.title}}</td></tr>
+<tr> <th>Description</th><td>{{result.des}}</td></tr>
+<tr> <th>Date</th><td>{{result.date}}</td></tr>
+<tr>
+
+<td>
+<a href='{{ url_for( "delete" , blog_id=resul.blog_id ) }}'><button type="button">Delete</button> </a>
+</td><td>
+
+<input type="submit" value="Edit">
+</td></tr>
+</table>
+</form>
+</body>
+</html>

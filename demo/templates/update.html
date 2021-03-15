@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Update</title>
-	<style type="text/css">
-    body
+  <title>Blog Display</title>
+<style> 
+body
 {
   background: url(static/wall11.jpg);
   background-size: cover; 
   font-family: Arial;
 }
-.signup
+.update
 {
   max-width: 350px;
   border-radius: 20px;
@@ -59,16 +58,16 @@ input[type=submit]
 </style>
 </head>
 <body style="background-image: url({{ url_for('static', filename='wall11.jpg') }})">
-	 <div class="signup">
-	 	 <h1>Update Now</h1>
-	 	 <form action='#' method = "POST">
-
-	 	 	
-	 	 	<p>username <input type = "text" name = "username" value="{{user.username}}"/></p>
-	 	 	<p>email_id <input type = "text" name = "email_id"  value="{{user.email_id}}"/></p>
-	 	 	<p>dob <input type = "date" name = "dob" value="{{user.dob}}"/></p>
-	 	 	<p>password <input type = "password" name = "password" value="{{user.password}}"/></p>
-	 	 	<p><input type = "submit" value = "Submit" /></p>
-</form>
-</body>
-</html>
+  <div class="update">
+    <h1>Update Blog</h1>
+    <form action="#" method="POST">
+      {{ form.csrf_token }}
+      <br>{{form.username.label}} {{ form.username() }}</br>
+      <br>{{form.title.label}} {{ form.title() }}</br>
+      <br>{{form.content.label}}  {{ form.content() }}</br>
+      <br>{{form.image.label}} {{ form.image() }}</br>
+      <input  type="submit" value="Update">
+   </form>
+ </div>
+ </body>
+ </html>
